@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="login-form">
+        <h1 class="main-title">MADDING</h1>
+        <p id='welcome-message'>Please insert your username and password:</p>
+        <div id="login-box">
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <input type="button" class="btn" value="LOGIN" onclick="act.login()">
+            <input type="button" class="btn reg" value="REGISTER" onclick="act.register()">
+        </div>
+        <input type="button" class="btn" value="LOGOUT" onclick="act.logout()">
+    </form>
+    <div class="container">
+        <div id='alert-wrong'></div>
+        <div class="content">
+            <div id="admin-form">
+                <h1>Activity List</h1>
+                <p><i>* You have rights to edit, remove, or add activity items.</i></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>NO.</th>
+                            <th>ACTIVITY</th>
+                            <th>DAY</th>
+                            <th>POSTER</th>
+                            <th>ACT</th>
+                        </tr>
+                    </thead>
+                    <tbody id="menu-list-admin">
+                    </tbody>
+                    <tbody id="menu-add-form">
+                        <tr>
+                            <td></td>
+                            <td><input type="text" placeholder="New Activity"></td>
+                            <td><select id="day-list">
+                                    <option value="Sunday">Sunday</option>
+                                    <option value="Monday">Monday</option>
+                                    <option value="Tuesday">Tuesday</option>
+                                    <option value="Wednesday">Wednesday</option>
+                                    <option value="Thursday">Thursday</option>
+                                    <option value="Friday">Friday</option>
+                                    <option value="Saturday">Saturday</option>
+                                </select></td>
+                            <td><input type="text" placeholder="New Poster Image URL"></td>
+                            <td><input type="button" class="btn" value="ADD TO DO" onclick="act.addItem()"></td>
+                        </tr>
+                    </tbody>
+                </table>`
+            </div>
+            <div id="user-area">
+                <div id="user-form">
+                    <h1>Activity List</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>NO.</th>
+                                <th>ACTIVITY</th>
+                                <th>DAY</th>
+                                <th>POSTER</th>
+                                <th>ACT</th>
+                            </tr>
+                        </thead>
+                        <tbody id="menu-list-user">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="./index.js"></script> -->
+
+    <script src="./js/database.js"></script>
+    <script src="./js/usermanager.js"></script>
+    <script src="./js/tools.js"></script>
+    <script src="./js/initialize.js"></script>
+</body>
+
+</html>
